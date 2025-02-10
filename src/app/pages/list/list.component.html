@@ -1,0 +1,11 @@
+<section>
+    <span class="grey">//List of projects</span>
+
+    <div>
+        @for (item of data; track $index) {
+        <a class="yellow textList text-decoration-none" [routerLink]="['/project', item.id]" 
+        routerLinkActive="active">{{item.id}}: {{item.name}}</a>
+        <br>
+        }
+    </div>
+</section>

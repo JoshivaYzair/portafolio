@@ -1,1 +1,176 @@
 /* You can add global styles to this file, and also import other style files */
+@charset "UTF-8";
+@import "custom.scss";
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("assets/fonts/IBMPlexMono-Regular.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("assets/fonts/IBMPlexMono-Regular.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("assets/fonts/IBMPlexMono-ExtraLight.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("assets/fonts/IBMPlexMono-ExtraLight.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+body {
+  --c-black: #1a1a1a;
+  --c-white: #e1e1e1;
+  --c-grey: #898989;
+  --c-purple: #b462ff;
+  --c-fuschia: #ff45b4;
+  --c-blue: #18b6ff;
+  --c-green: #1beb9e;
+  --c-orange: #ff9528;
+  --c-red: #ff4528;
+  --c-yellow: #dddd25;
+  --line: 2.5ch;
+  --font: "IBM", monospace;
+
+  height: 100%;
+
+  background: var(--c-black);
+  color: var(--c-white);
+  padding: var(--line);
+  font-family: var(--font);
+  line-height: var(--line);
+  letter-spacing: 0.01em;
+  font-size: 3.97vw;
+  user-select: none;
+  font-weight: 500;
+}
+
+body.invert {
+  --c-black: #d5d5d5;
+  --c-white: #2a2830;
+  --c-grey: #7e7e7e;
+  --c-purple: #6b1fa3;
+  --c-fuschia: #f50777;
+  --c-blue: #0b8cff;
+  --c-green: #00a76c;
+  --c-orange: #dd7200;
+  --c-yellow: #949700;
+}
+
+.black {
+  color: var(--c-black);
+  --c-current: var(--c-black);
+}
+
+.white {
+  color: var(--c-white);
+  --c-current: var(--c-white);
+}
+
+.grey {
+  color: var(--c-grey);
+  --c-current: var(--c-grey);
+}
+
+.purple {
+  color: var(--c-purple);
+  --c-current: var(--c-purple);
+}
+
+.fuschia {
+  color: var(--c-fuschia);
+  --c-current: var(--c-fuschia);
+}
+
+.blue {
+  color: var(--c-blue);
+  --c-current: var(--c-blue);
+}
+
+.green {
+  color: var(--c-green);
+  --c-current: var(--c-green);
+}
+
+.orange {
+  color: var(--c-orange);
+  --c-current: var(--c-orange);
+}
+
+.red {
+  color: var(--c-red);
+  --c-current: var(--c-red);
+}
+
+.yellow {
+  color: var(--c-yellow);
+  --c-current: var(--c-yellow);
+}
+
+a:hover,
+.selected,
+.hover:hover {
+  color: var(--c-black);
+  background: var(--c-current);
+  box-shadow: 0.4ch 0 0 0 var(--c-current), -0.3ch 0 0 0 var(--c-current),
+    0.4ch 0.2ch 0 0 var(--c-current), -0.3ch 0.2ch 0 0 var(--c-current);
+  opacity: 0.8;
+}
+
+.title {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 4vw;
+  line-height: 1.11111111em;
+  font-weight: 500;
+}
+
+.active {
+  color: var(--c-black);
+  background: var(--c-current);
+  box-shadow: 0.4ch 0 0 0 var(--c-current), -0.3ch 0 0 0 var(--c-current),
+    0.4ch 0.2ch 0 0 var(--c-current), -0.3ch 0.2ch 0 0 var(--c-current);
+  opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 2vw;
+  }
+}
+//@media (max-width: 767px) {
+//  body {
+//    font-size: 66.66%;
+//    width: 100%;
+//    line-height: 1.5em;
+//  }
+//}
+
+
+@media (max-width: 1024px) {
+  .title {
+    font-weight: 200;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.11111111vw;
+    overflow: hidden;
+  }
+
+  article {
+    height: 100vh;
+  }
+}

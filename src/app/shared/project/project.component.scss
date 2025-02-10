@@ -1,0 +1,31 @@
+article {
+  padding: var(--line);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  min-height: 100%;
+}
+
+#carousel {
+  overflow: hidden;
+  opacity: 1;
+}
+
+.carousel-item img {
+  object-fit: contain;
+  transition: transform 1s ease;
+  height: 32vh;
+}
+
+
+.carousel-control-prev, .carousel-control-next {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  transition: none;
+  opacity: 1;
+  transform: none ;
+  box-shadow: none ; 
+  outline: none ;
+}
+

@@ -1,0 +1,14 @@
+article {
+  padding: var(--line);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  min-height: 100%;
+}
+
+.main-title {
+  font-weight: 700;
+}
+.sub-title {
+  font-style: italic;
+}
