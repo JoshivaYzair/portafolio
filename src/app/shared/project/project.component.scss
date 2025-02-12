@@ -14,7 +14,7 @@ article {
 .carousel-item img {
   object-fit: contain;
   transition: transform 1s ease;
-  height: 32vh;
+  max-height: 32vh;
 }
 
 
